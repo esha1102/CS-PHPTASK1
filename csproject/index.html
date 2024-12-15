@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Door Hover Effect</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* Fullscreen Background */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: url('bgimage.jpg') no-repeat center center;
+            background-size: cover;
+            z-index: -1;
+        }
+
+        /* Pink Door */
+        .pink-door {
+            position: absolute;
+            top: 75%;
+            left: 75%;
+            transform: translate(-50%, -50%);
+            width: 320px; /* Adjust size as needed */
+            height: auto;
+            cursor: pointer;
+        }
+
+        .pink-door img {
+            width: 100%;
+            height: auto;
+        }
+        .white-door {
+            position: absolute;
+            top: 22%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            width: 390px; /* Adjust size as needed */
+            height: auto;
+            cursor: pointer;
+        }
+
+        .white-door img {
+            width: 100%;
+            height: auto;
+        }
+
+        .green-door {
+            position: absolute;
+            top: 23%;
+            left: 75%;
+            transform: translate(-50%, -50%);
+            width: 340px; /* Adjust size as needed */
+            height: auto;
+            cursor: pointer;
+        }
+
+        .green-door img {
+            width: 100%;
+            height: auto;
+        }
+
+        .orange-door {
+            position: absolute;
+            top: 75%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            width: 370px; /* Adjust size as needed */
+            height: auto;
+            cursor: pointer;
+        }
+
+        .orange-door img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background -->
+    <div class="background"></div>
+
+    <!-- Pink Door -->
+    <div class="pink-door" id="pinkDoor">
+        <a href="blossom.php">
+        <img src="pink.png" alt="Pink Door" id="doorClosed">
+        </a>
+    </div>
+
+    <div class="white-door" id="whiteDoor">
+        <a href="winter.php">
+        <img src="white.png" alt="white-door" id="doorClosed2">
+    </a>
+    </div>
+
+    <div class="green-door" id="greenDoor">
+        <a href="summer.php">
+        <img src="green.png" alt="green-door" id="doorClosed3">
+    </a>
+    </div>
+
+    <div class="orange-door" id="orangeDoor">
+        <a href="autumn.php">
+        <img src="orange.png" alt="orange-door" id="doorClosed4">
+    </a>
+    </div>
+
+    <script>
+        // Hover functionality for the pink door
+        const pinkDoor = document.getElementById('pinkDoor');
+        const doorClosed = document.getElementById('doorClosed');
+
+        // Images for hover effect
+        const doorClosedSrc = 'pink.png';
+        const doorOpenSrc = 'popen.png'; // You need to provide this "open" state image
+
+        // Event listeners for hover
+        pinkDoor.addEventListener('mouseover', () => {
+            doorClosed.src = doorOpenSrc;
+        });
+
+        pinkDoor.addEventListener('mouseout', () => {
+            doorClosed.src = doorClosedSrc;
+        });
+
+
+
+        // Hover functionality for the pink door
+        const whiteDoor = document.getElementById('whiteDoor');
+        const doorClosed2 = document.getElementById('doorClosed2');
+
+        // Images for hover effect
+        const doorClosed2Src = 'white.png';
+        const doorOpen2Src = 'wopen.png'; // You need to provide this "open" state image
+
+        // Event listeners for hover
+        whiteDoor.addEventListener('mouseover', () => {
+            doorClosed2.src = doorOpen2Src;
+        });
+
+        whiteDoor.addEventListener('mouseout', () => {
+            doorClosed2.src = doorClosed2Src;
+        });
+
+
+
+        // Hover functionality for the pink door
+        const greenDoor = document.getElementById('greenDoor');
+        const doorClosed3 = document.getElementById('doorClosed3');
+
+        // Images for hover effect
+        const doorClosed3Src = 'green.png';
+        const doorOpen3Src = 'gopen.png'; // You need to provide this "open" state image
+
+        // Event listeners for hover
+        greenDoor.addEventListener('mouseover', () => {
+            doorClosed3.src = doorOpen3Src;
+        });
+
+        greenDoor.addEventListener('mouseout', () => {
+            doorClosed3.src = doorClosed3Src;
+        });
+
+
+        // Hover functionality for the pink door
+        const orangeDoor = document.getElementById('orangeDoor');
+        const doorClosed4 = document.getElementById('doorClosed4');
+
+        // Images for hover effect
+        const doorClosed4Src = 'orange.png';
+        const doorOpen4Src = 'oopen.png'; // You need to provide this "open" state image
+
+        // Event listeners for hover
+        orangeDoor.addEventListener('mouseover', () => {
+            doorClosed4.src = doorOpen4Src;
+        });
+
+        orangeDoor.addEventListener('mouseout', () => {
+            doorClosed4.src = doorClosed4Src;
+        });
+    </script>
+</body>
+</html>
